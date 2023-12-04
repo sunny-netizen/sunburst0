@@ -85,6 +85,7 @@ slice.append('path')
     .style('stroke', colors[0]) //'#fff'  
     .style('stroke-width', '3px')
     .style("fill", function (d) { return color((d.children ? d : d.parent).data.name); })
+    .attr("opacity", 0.7);
     //.on("mouseover", tooltip.show)
     //.on("mouseout", tooltip.hide)
 //.style("fill", "url(#kitten)");
