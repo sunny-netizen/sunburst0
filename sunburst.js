@@ -33,7 +33,7 @@ console.log(nodeData)
 
 const width = window.innerWidth;
 const height = window.innerHeight;
-const radius = Math.min(width, height) / 3.5;
+const radius = Math.min(width, height) / 2.3;
 //const color = d3.scaleOrdinal(["#B5FED9", "#98CBB4", "#7BA098"]); // #423B0B
 //const color = d3.scaleOrdinal(["#FDE74C", "#FF3366", "#2EC4B6"]); // #011627
 const colors =  ["#011627", "#FDE74C", "#FF3366", "#2EC4B6"]
@@ -63,8 +63,8 @@ arc = d3.arc()
     //.endAngle(function (d) { return d.x1 })
     .startAngle(function (d) { d.x0s = d.x0; return d.x0; })
     .endAngle(function (d) { d.x1s = d.x1; return d.x1; })
-    .innerRadius(function (d) { return d.y0 + 120 })
-    .outerRadius(function (d) { return d.y1 + 120 });
+    .innerRadius(function (d) { return d.y0 + 20 })
+    .outerRadius(function (d) { return d.y1 + 20 });
 
 // Defining the arcs
 const slice = g.selectAll('g')
@@ -85,7 +85,7 @@ slice.append('path')
     .style('stroke', colors[0]) //'#fff'  
     .style('stroke-width', '3px')
     .style("fill", function (d) { return color((d.children ? d : d.parent).data.name); })
-    .attr("opacity", 0.7);
+    .attr("opacity", 0.8);
     //.on("mouseover", tooltip.show)
     //.on("mouseout", tooltip.hide)
 //.style("fill", "url(#kitten)");
@@ -164,6 +164,7 @@ g.append("text")
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
     .attr("fill", colors[1])
+    .attr("font-size", 30) 
     .text("Hi, I'm Sunny"); 
 
 // Append a rectangle directly under the text
@@ -210,10 +211,10 @@ g.append("text")
 
 // Append an image directly under the text
 g.append("image")
-    .attr("x", 20) // Adjust the positioning as needed
-    .attr("y", -35) // Adjust the positioning as needed
-    .attr("width", 100) // Set the width of the image
-    .attr("height", 30) // Set the height of the image
+    .attr("x", 70) // Adjust the positioning as needed
+    .attr("y", -45) // Adjust the positioning as needed
+    .attr("width", 35) // Set the width of the image
+    .attr("height", 35) // Set the height of the image
     .attr("xlink:href", "images/sunlogo.png"); // Specify the path to your image file
 
 
@@ -260,3 +261,28 @@ function arcTweenText(a, i) {
     }
     return tween;
 }
+
+
+/*
+
+const fairyRadius = 15
+const fairy = g.append("circle")
+.attr("cx", 200)
+.attr("cy", 100)
+.attr("r", fairyRadius)
+.style("fill", "white")
+.style("opacity", 0.3)
+
+function flyFairy() {
+    const newX = Math.random() * (width - fairyRadius * 2) + fairyRadius;
+    const newY = Math.random() * (height - fairyRadius * 2) + fairyRadius;
+  
+    fairy.transition()
+      .duration(1000)
+      .attr("cx", newX)
+      .attr("cy", newY)
+      .on("end", flyFairy());
+  }
+  
+  flyFairy();
+  */
