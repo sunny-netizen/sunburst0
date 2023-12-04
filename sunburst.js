@@ -179,7 +179,26 @@ g.append("rect")
     })
     .on("mouseout", function() {
         d3.select(this).attr("fill", colors[3]); // Change color back on mouseout
+    })
+    .on("click", function() {
+        var contactSection = d3.select("#contact").node();
+        d3.select("html, body").transition().duration(1000).ease(d3.easeCubicInOut)
+            .tween("scroll", scrollTopTween(contactSection.offsetTop));
     });
+
+function scrollTopTween(scrollTop) {
+    return function() {
+        var i = d3.interpolateNumber(window.pageYOffset || document.documentElement.scrollTop, scrollTop);
+        return function(t) { scrollTo(0, i(t)); };
+    };
+}
+
+/* 
+document.getElementById("myRect").addEventListener("click", function() {
+    var contactSection = document.getElementById("contact");
+    contactSection.scrollIntoView({ behavior: "smooth" });
+});
+*/
    
 g.append("text")
     .attr("text-anchor", "middle")

@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed');
 
+
+/* const colors =  ["#011627", "#FDE74C", "#FF3366", "#2EC4B6"] */
+
 body {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-family: "Saira Semi Condensed";
@@ -10,16 +13,15 @@ body {
 }
 
 text {
-    pointer-events: none;
+    pointer-events: none; /* Make text "non selectable" */
     color: #011627;
 }
 
-/* Make text "non selectable" */
-
-
-i {
-    color: aliceblue;
-    position: relative;
-    font-size: large;
+section {
+    color: #FDE74C;
+    display: flex; /* Use flexbox */
+    flex-direction: column;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    /* Add other styles as needed */
 }
-

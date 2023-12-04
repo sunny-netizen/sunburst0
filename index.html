@@ -10,15 +10,38 @@
     <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
 </head>
 <body>
-
-    <svg>
-    </svg>
+    <svg></svg>
     <!-- tweening
                 <i id="github" class="fa fa-github fa-2xl"></i>
         <i id="email" class="fa-regular fa-envelope fa-2xl"></i>
     <label><input class="sizeSelect" type="radio" name="mode" value="size" checked /> Size</label>
     <label><input class="sizeSelect"  type="radio" name="mode" value="count" /> Count</label>
     -->
+    <section id="contact">
+        <h1>Contact Form</h1>
+        <form class="flex-form">
+            <div class="checkboxes">
+                <fieldset>
+                    <legend>Select Multiple Options:</legend>
+                    <label><input type="checkbox" name="option1" value="option1"> Make me a map</label><br>
+                    <label><input type="checkbox" name="option2" value="option2"> Make me a graph</label><br>
+                    <label><input type="checkbox" name="option3" value="option3"> Make me a hierarchy</label><br>
+                    <label><input type="checkbox" name="option4" value="option4"> Something else?</label><br>
+                </fieldset>
+            </div>
+            <div class="email-box">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+            </div>
+            <div class="message-box">
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <p>sunny.yun.zhao@gmail.com</p>
+    </section>
+    
     <script src="sunburst.js"></script>
 </body>
 </html>
