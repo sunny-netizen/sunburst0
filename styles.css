@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed');
+
+body {
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Saira Semi Condensed";
+    font-stretch: expanded;
+    font-size: x-large;
+    background-color: #011627;
+}
+
+text {
+    pointer-events: none;
+    color: #011627;
+}
+
+/* Make text "non selectable" */
+
+
+i {
+    color: aliceblue;
+    position: relative;
+    font-size: large;
+}
+
