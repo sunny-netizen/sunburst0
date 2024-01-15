@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunburst</title>
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://kit.fontawesome.com/90d8b3668a.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
 </head>
 <body>
-    <svg></svg>
+    <svg id="sunburst"></svg>
     <!-- tweening
                 <i id="github" class="fa fa-github fa-2xl"></i>
         <i id="email" class="fa-regular fa-envelope fa-2xl"></i>
@@ -18,8 +18,9 @@
     <label><input class="sizeSelect"  type="radio" name="mode" value="count" /> Count</label>
     -->
     <section id="contact">
-        <h1>Contact Form</h1>
+        <!--<h1>Contact Form</h1>
         <form class="flex-form">
+            
             <div class="checkboxes">
                 <fieldset>
                     <legend>Select Multiple Options:</legend>
@@ -29,6 +30,7 @@
                     <label><input type="checkbox" name="option4" value="option4"> Something else?</label><br>
                 </fieldset>
             </div>
+            <h3>How can I help you?</h3>
             <div class="email-box">
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email" required><br>
@@ -38,10 +40,10 @@
                 <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
             </div>
             <button type="submit">Submit</button>
-        </form>
+        </form>-->
         <p>sunny.yun.zhao@gmail.com</p>
     </section>
-    
-    <script src="sunburst.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
+
